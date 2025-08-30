@@ -1,16 +1,18 @@
+import java.util.*;
 public class Alumnos{
     private String nombre;
     private int tipoMebresia;
     private int entrenadorEscogido;
-    private Rutina rutina;
+    private ArrayList<Rutina> rutina;
 
+    //Constructor
     public Alumnos(){
-
+       rutina = new ArrayList<>(); 
     }
 
-
+    //setters y getters de cada uno de los atributos
     public void setNombre(String newnombre){
-
+        this.nombre=newnombre;
     }
     public String getNombre(){
         return nombre;
@@ -18,7 +20,7 @@ public class Alumnos{
 
 
     public void setTipoMebresia(int newtipoMembresia){
-
+        this.tipoMebresia=newtipoMembresia;
     }
     public int getTipoMembresia(){
         return tipoMebresia;
@@ -27,16 +29,16 @@ public class Alumnos{
 
 
     public void setEntrenadorEscogido(int newentrenadorEscogido){
-
+        this.entrenadorEscogido=newentrenadorEscogido;
     }
     public int getEntrenadorEscogido(){
         return entrenadorEscogido;
     }
 
     public void setRutina(Rutina newrutina){
-
+        rutina.add(newrutina);
     }
-    public Rutina getRutina(){
+    public ArrayList<Rutina> getRutina(){
         return rutina;
 
     }

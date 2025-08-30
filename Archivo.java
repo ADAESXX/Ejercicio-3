@@ -1,11 +1,33 @@
+import java.io.*;
+import java.util.*;
+
 public class Archivo {
-    private int opcion;
-
     public Archivo(){
-
+        
+    }
+    public boolean escribir(ArrayList<Clase> clases) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter("gimnasio.csv"))) {
+            for (Clase c : clases) {
+                for (Alumnos a : c.getAlumnos()) {
+                    pw.println(a.getNombre() + ";" + a.getTipoMembresia() + ";" +
+                               c.getEntrenador().getNombre());
+                }
+            }
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
     }
 
-    public String doAccion(int newopcion){
-        
+    public boolean leer() {
+        try (BufferedReader br = new BufferedReader(new FileReader("gimnasio.csv"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
     }
 }
