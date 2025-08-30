@@ -1,7 +1,7 @@
 import java.util.*;
 public class Alumnos{
     private String nombre;
-    private int tipoMebresia;
+    private int tipoMebresia;// 1→normal 2→VIP
     private int entrenadorEscogido;
     private ArrayList<Rutina> rutina;
 

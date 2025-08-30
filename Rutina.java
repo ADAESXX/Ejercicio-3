@@ -64,4 +64,10 @@ public class Rutina{
         return rDomingo;
     }
 
+    //toString
+    public String toString() {
+        return "Lunes: " + rLunes + ", Martes: " + rMartes + ", Miércoles: " + rMiercoles +
+               ", Jueves: " + rJueves + ", Viernes: " + rViernes + ", Sábado: " + rSabado +
+               ", Domingo: " + rDomingo;
+    }
 }

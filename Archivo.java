@@ -9,7 +9,7 @@ public class Archivo {
         try (PrintWriter pw = new PrintWriter(new FileWriter("gimnasio.csv"))) {
             for (Clase c : clases) {
                 for (Alumnos a : c.getAlumnos()) {
-                    pw.println(a.getNombre() + ";" + a.getTipoMembresia() + ";" +
+                    pw.println(a.getNombre() + ";" + a.getTipoMembresia() + ";" + a.getRutina().toString() + 
                                c.getEntrenador().getNombre());
                 }
             }
